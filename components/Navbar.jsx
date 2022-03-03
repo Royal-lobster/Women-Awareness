@@ -30,12 +30,14 @@ function Navbar() {
       </VStack>
       <HStack spacing={8} bgColor="#0000002a" h="50px">
         <Flex
+          display={{ base: "none", lg: "flex" }}
           align="center"
           px={8}
           justify="stretch"
           borderTopRightRadius="xl"
           bgColor="brand.accent"
           h="100%"
+          mr={8}
         >
           <Heading size="md" color="#0000009a">
             Links

@@ -23,7 +23,9 @@ function index() {
         </Box>
         <HomeQuote />
       </Flex>
-      <Heading mb={4}>Links</Heading>
+      <Heading mt={{ base: 8, lg: 0 }} mb={4}>
+        Links
+      </Heading>
       <SimpleGrid columns={[1, 3, 4]} spacing={8}>
         {NavLinksData.map((navLink) => (
           <HomeLinkShortcut key={navLink.href} navLink={navLink} />
