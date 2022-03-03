@@ -57,7 +57,7 @@ function Navbar() {
             console.log(router.asPath, nav_link.href);
             let isActive = nav_link.href === router.asPath;
             return (
-              <NextLink href={nav_link.href} passHref>
+              <NextLink key={nav_link.href} href={nav_link.href} passHref>
                 <Link
                   bgColor={isActive ? "brand.contrast" : "transparent"}
                   href="passRef"
