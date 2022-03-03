@@ -7,6 +7,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "@fontsource/amiko";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Head from "next/head";
 
 const theme = extendTheme({
   textStyles: {
@@ -88,13 +89,18 @@ const theme = extendTheme({
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ChakraProvider theme={theme}>
-      <Navbar />
-      <Box minH="calc(100vh - 350px)">
-        <Component {...pageProps} />
-      </Box>
-      <Footer />
-    </ChakraProvider>
+    <>
+      <Head>
+        <title>Women Awareness</title>
+      </Head>
+      <ChakraProvider theme={theme}>
+        <Navbar />
+        <Box minH="calc(100vh - 350px)">
+          <Component {...pageProps} />
+        </Box>
+        <Footer />
+      </ChakraProvider>
+    </>
   );
 }
 

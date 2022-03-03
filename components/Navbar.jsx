@@ -21,7 +21,7 @@ function Navbar() {
       backgroundPosition="center"
     >
       <VStack color="white" py={12}>
-        <Heading>Women's Awarenessness</Heading>
+        <Heading>Women&apos;s Awarenessness</Heading>
         <Text textAlign="center">
           Jawaharlal Nehuru Technological University Gurajada Vizianagaram
           <br />

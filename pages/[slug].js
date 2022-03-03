@@ -11,7 +11,7 @@ function PostTemplate({ content, data }) {
     <Box p={8} maxW="1200px" mx="auto">
       <Heading mb={8}>{frontmatter.title}</Heading>
       <div className="markdown-body">
-        <ReactMarkdown rehypePlugins={[rehypeRaw]} children={content} />
+        <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
       </div>
     </Box>
   );
