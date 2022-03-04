@@ -214,6 +214,7 @@
   display: block;
   width: max-content;
   max-width: 100%;
+  margin: 0 auto;
   overflow: auto;
 }
 
@@ -681,6 +682,11 @@
 
 .markdown-body table img {
   background-color: transparent;
+}
+
+/* remove this if needed */
+.markdown-body img {
+  margin: 0 auto;
 }
 
 .markdown-body img[align="right"] {

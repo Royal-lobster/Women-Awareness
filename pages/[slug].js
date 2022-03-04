@@ -9,10 +9,12 @@ function PostTemplate({ content, data }) {
   // This holds the data between `---` from the .md file
   const frontmatter = data;
   return (
-    <Box p={8} maxW="1200px" mx="auto">
+    <Box p={8} maxW="1100px" mx="auto">
       <Heading mb={8}>{frontmatter.title}</Heading>
       <div className="markdown-body">
-        <ReactMarkdown rehypePlugins={[rehypeRaw, gfm]}>{content}</ReactMarkdown>
+        <ReactMarkdown rehypePlugins={[rehypeRaw, gfm]}>
+          {content}
+        </ReactMarkdown>
       </div>
     </Box>
   );
