@@ -3,6 +3,7 @@ import matter from "gray-matter";
 import ReactMarkdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import { Box, Heading } from "@chakra-ui/react";
+import gfm from "https://cdn.skypack.dev/remark-gfm@1.0.0";
 
 function PostTemplate({ content, data }) {
   // This holds the data between `---` from the .md file
@@ -11,7 +12,7 @@ function PostTemplate({ content, data }) {
     <Box p={8} maxW="1200px" mx="auto">
       <Heading mb={8}>{frontmatter.title}</Heading>
       <div className="markdown-body">
-        <ReactMarkdown rehypePlugins={[rehypeRaw]}>{content}</ReactMarkdown>
+        <ReactMarkdown rehypePlugins={[rehypeRaw, gfm]}>{content}</ReactMarkdown>
       </div>
     </Box>
   );
